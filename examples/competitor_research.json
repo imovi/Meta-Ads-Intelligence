@@ -1,0 +1,6 @@
+[
+  {"brand":"Competitor A","ad_id":"a1","status":"active","first_seen":"2026-07-01","format":"UGC","hook_type":"problem","angle":"problem-solution","offer_type":"discount","offer":"10% off","cta":"Shop Now","proof":"testimonial","primary_text":"Problem-led UGC ad","evidence":"Observed"},
+  {"brand":"Competitor A","ad_id":"a2","status":"active","first_seen":"2026-07-12","format":"UGC","hook_type":"proof","angle":"proof","offer_type":"discount","offer":"10% off","cta":"Shop Now","proof":"testimonial","primary_text":"Customer proof","evidence":"Observed"},
+  {"brand":"Competitor B","ad_id":"b1","status":"active","first_seen":"2026-07-20","format":"product demo","hook_type":"demo","angle":"benefit","offer_type":"none","cta":"Learn More","proof":"demo","primary_text":"Product demonstration","evidence":"Observed"},
+  {"brand":"Competitor B","ad_id":"b2","status":"inactive","first_seen":"2026-06-15","last_seen":"2026-07-30","format":"product demo","hook_type":"problem","angle":"education","offer_type":"none","cta":"Learn More","proof":"demo","primary_text":"Educational demo","evidence":"Observed"}
+]
