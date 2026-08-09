@@ -15,56 +15,70 @@ compatibility: Browser/computer-use access preferred; Meta Marketing API optiona
 
 # Meta Ads Intelligence
 
+## Slash-command usage
+
+The primary invocation is:
+
+> `/Meta-Ads-Intelligence use my browser and analyze this ad`
+
+Also accept:
+
+> `/Meta Ads Intelligence use my browser and analyze this ad`
+
+The command is a routing hint, not an API credential request. If browser/computer-use access is available, use the user's existing authenticated browser session.
+
+Examples:
+
+> `/Meta-Ads-Intelligence audit my account`
+
+> `/Meta-Ads-Intelligence find my winning creatives`
+
+> `/Meta-Ads-Intelligence check creative fatigue`
+
+> `/Meta-Ads-Intelligence create A/B tests from my winners`
+
+> `/Meta-Ads-Intelligence how should I allocate my $1,000/day budget?`
+
+> `/Meta-Ads-Intelligence should I scale this campaign?`
+
+> `/Meta-Ads-Intelligence make a weekly report`
+
+> `/Meta-Ads-Intelligence monitor my ROAS`
+
+> `/Meta-Ads-Intelligence pause campaign ABC`
+
 ## Primary interaction model
 
-The skill is designed for a simple command such as:
+When the host provides browser/computer-use access, operate directly in the user's existing authenticated browser session. **Do not ask for a Meta API token just to perform browser-based analysis.**
 
-> `/Meta Ads Intelligence — use my browser and analyze this ad.`
-
-or:
-
-> `/Meta Ads Intelligence — use my browser to analyze my Ads Manager campaigns from yesterday.`
-
-When the host provides browser/computer-use access, the skill should operate directly in the user's existing authenticated browser session. **Do not ask for a Meta API token just to perform browser-based analysis.**
-
-Browser access is an environment capability. If the host does not provide browser/computer-use access, do not pretend that it does; use an available export, screenshot, public source, or authorized API connector instead.
+If the host does not provide browser/computer-use access, do not pretend that it does; use an available export, screenshot, public source, or authorized API connector instead.
 
 ## Default mode: ANALYSIS
 
-For requests such as:
+Analysis is read-only. For requests such as browser analysis, account checks, competitor research, winner detection, fatigue checks, budget simulation, or scaling assessment, use browser inspection when available, collect visible evidence, and return analysis. Do not modify the account.
 
-- "use my browser and analyze this ad"
-- "open Ads Manager and analyze yesterday"
-- "check this campaign"
-- "find why CPA increased"
-- "analyze this competitor ad"
-- "compare these creatives"
-
-use browser inspection when available, collect the visible evidence, and return analysis. Do not modify the account.
-
-### Browser analysis procedure
+## Browser analysis procedure
 
 1. Open the relevant Meta page in the user's browser.
-2. If the user is already authenticated, use that session; never ask for passwords, cookies, or access tokens in chat.
-3. Identify the visible business/ad account before reading account-level metrics.
-4. Confirm the date range and relevant filters.
+2. If authenticated, use that session; never ask for passwords, cookies, or access tokens in chat.
+3. Identify the visible business/ad account.
+4. Confirm date range and filters.
 5. Locate the requested campaign, ad set, ad, or creative.
-6. Read only the information needed for the requested analysis.
-7. Capture visible metrics and context as `browser_observed` evidence.
-8. Inspect the creative itself when requested: image/video, hook, copy, offer, proof, CTA, format, and visible landing-page/message alignment.
-9. Feed the observations into the appropriate analysis modules.
-10. Clearly separate **Observed**, **Inferred**, and **Unknown** conclusions.
-11. Return findings, likely causes, recommendations, and confidence/data limitations.
+6. Capture visible metrics/context as `browser_observed` evidence.
+7. Inspect creative when requested: image/video, hook, copy, offer, proof, CTA, format, and visible landing-page/message alignment.
+8. Feed observations into the appropriate intelligence modules.
+9. Separate **Observed**, **Inferred**, and **Unknown**.
+10. Return findings, likely causes, recommendations, and confidence/data limitations.
 
 ### Example
 
 User:
-> `/Meta Ads Intelligence use my browser and analyze this ad`
+> `/Meta-Ads-Intelligence use my browser and analyze this ad`
 
 Behavior:
 
 ```text
-Open current browser tab / Meta Ads Manager
+Current browser / Meta Ads Manager
         ↓
 Identify account + date range
         ↓
@@ -72,27 +86,32 @@ Open requested ad
         ↓
 Read visible metrics + creative
         ↓
-Analyze hook / copy / offer / CTA / performance
+Deep Ad Analysis
         ↓
-Compare with available baseline
+Winner / Fatigue / Performance checks
         ↓
 Return analysis
 ```
 
-If the user has a specific ad URL or the ad is already open in the browser, use that target rather than asking the user to export data.
+If a specific ad URL is supplied or the ad is already open, use that target.
 
-## Available modes
+## Intelligence modes
 
 - **ANALYZE** — performance and diagnostic analysis.
 - **AUDIT** — full account/campaign/ad-set/ad audit.
 - **COMPETITOR** — public competitor and Meta Ad Library research.
 - **CREATIVE** — image/video/Reels/copy/hook analysis.
+- **WINNERS** — winning ads and repeatable creative patterns.
+- **FATIGUE** — multi-signal creative fatigue detection.
+- **TEST** — controlled A/B creative test hypotheses.
 - **STRATEGY** — optimization, scaling, budget allocation, and testing recommendations.
+- **SCALE** — scale/hold/reduce/test readiness and risk assessment.
+- **BUDGET** — budget allocation simulation without account changes.
 - **REPORT** — daily/weekly/monthly reporting.
 - **MONITOR** — anomaly and trend monitoring.
 - **ACTION** — explicit account-changing operations only.
 
-Use the natural-language command router to select the mode. If intent is unclear, default to analysis.
+Use the natural-language command router. If intent is unclear, default to analysis.
 
 ## Action mode
 
@@ -104,12 +123,12 @@ Only enter ACTION mode when the user explicitly asks to change the account, for 
 
 Before consequential changes:
 
-1. Identify the exact account/object.
-2. Read current state from the browser or authorized API.
-3. Show the proposed change and old/new values.
-4. Confirm when required by the action policy.
-5. Execute through the available browser/API capability.
-6. Re-read the resulting state and verify it.
+1. Identify exact account/object.
+2. Read current state.
+3. Show proposed change and old/new values.
+4. Confirm when required.
+5. Execute through available browser/API capability.
+6. Re-read and verify the resulting state.
 7. Report exactly what happened.
 
 Never claim an action succeeded without verification.
@@ -130,9 +149,10 @@ For performance analysis:
 4. Analyze performance.
 5. Check anomalies and data integrity.
 6. Analyze creative when relevant.
-7. Audit the affected object.
-8. Produce strategy and prioritized recommendations.
-9. Report confidence and limitations.
+7. Detect winners/fatigue when enough historical data exists.
+8. Evaluate scaling/budget scenarios when requested.
+9. Produce strategy and prioritized recommendations.
+10. Report confidence and limitations.
 
 For competitor research, use only public/authorized evidence and never claim private competitor spend, CPA, ROAS, targeting, or conversion results without reliable evidence.
 
@@ -144,15 +164,20 @@ Use:
 - **Inferred** — reasonable interpretation from evidence.
 - **Unknown** — not available from the source.
 
-## Routing references
+## Module references
 
 Load only what is needed:
 
-- Browser access → `references/browser-first.md`
-- Performance diagnosis → `references/campaign-diagnosis.md`
-- Competitors → `references/competitor-analysis.md`
+- Browser → `references/browser-first.md`, `references/browser-vision.md`
+- Performance → `references/campaign-diagnosis.md`
+- Deep ad → `references/deep-ad-analysis.md`
+- Competitors → `references/competitor-analysis.md`, `references/advanced-competitor-intelligence.md`
 - Creative → `references/creative-analysis.md`
-- Strategy → `references/strategy-and-optimization.md`
+- Winners → `references/winning-creatives.md`
+- Fatigue → `references/creative-fatigue.md`
+- Testing → `references/creative-testing.md`
+- Strategy/scaling → `references/strategy-and-optimization.md`, `references/scaling-intelligence.md`
+- Budget → `references/budget-allocation.md`
 - Reporting → `references/reporting.md`
 - Monitoring → `references/monitoring-and-anomalies.md`
 - Import/export → `references/data-import.md`
@@ -160,7 +185,7 @@ Load only what is needed:
 
 ## Fallbacks
 
-If browser access is unavailable, do not stop unnecessarily. Use, in order:
+If browser access is unavailable, use, in order:
 
 1. supplied screenshot/file/export
 2. public web source for public information
