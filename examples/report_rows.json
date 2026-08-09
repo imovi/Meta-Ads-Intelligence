@@ -1,0 +1,4 @@
+[
+  {"id":"campaign_001","name":"Prospecting","spend":1200,"impressions":180000,"reach":120000,"clicks":4500,"conversions":120,"revenue":4800,"roas":4.0},
+  {"id":"campaign_002","name":"Retargeting","spend":600,"impressions":60000,"reach":30000,"clicks":2400,"conversions":90,"revenue":2700,"roas":4.5}
+]
