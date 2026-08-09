@@ -1,0 +1,31 @@
+{
+  "page_url": "https://adsmanager.facebook.com/",
+  "page_title": "Ads Manager",
+  "account_name": "Demo Store",
+  "account_id": "act_demo_001",
+  "date_range": "2026-08-01 to 2026-08-10",
+  "object_type": "ad",
+  "object_id": "ad_001",
+  "object_name": "UGC Hook A",
+  "visible_metrics": {
+    "spend": 120,
+    "impressions": 18000,
+    "reach": 12000,
+    "clicks": 540,
+    "conversions": 12,
+    "revenue": 720
+  },
+  "filters": {
+    "status": "active"
+  },
+  "creative": {
+    "format": "video",
+    "opening_hook": "Problem-first hook",
+    "primary_text": "A practical product benefit.",
+    "headline": "See how it works",
+    "offer": "10% off",
+    "proof": "Customer testimonial",
+    "cta": "Shop Now"
+  },
+  "evidence": "browser_observed"
+}
