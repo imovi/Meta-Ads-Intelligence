@@ -1,0 +1,6 @@
+[
+  {"id":"ad_001","name":"UGC Problem A","hook_type":"problem","angle":"problem-solution","format":"UGC video","offer":"10% off","cta":"Shop Now","spend":300,"conversions":24,"revenue":1200,"ctr":2.6},
+  {"id":"ad_002","name":"UGC Problem B","hook_type":"problem","angle":"problem-solution","format":"UGC video","offer":"10% off","cta":"Shop Now","spend":250,"conversions":18,"revenue":900,"ctr":2.4},
+  {"id":"ad_003","name":"Demo A","hook_type":"demo","angle":"benefit","format":"product demo","offer":null,"cta":"Learn More","spend":250,"conversions":7,"revenue":280,"ctr":1.5},
+  {"id":"ad_004","name":"Static Offer","hook_type":"offer","angle":"discount","format":"image","offer":"20% off","cta":"Shop Now","spend":40,"conversions":3,"revenue":160,"ctr":2.8}
+]
