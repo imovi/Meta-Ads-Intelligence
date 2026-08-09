@@ -34,25 +34,44 @@ If some layers are unavailable, state exactly what was not audited.
 10. Produce recommended tests/actions.
 11. Keep all account changes behind the explicit ACTION workflow.
 
-## Audit score
+## Health score
 
 A directional score may summarize the audit, but it must never be presented as a Meta account-quality metric.
 
 The detailed findings are more important than the score.
 
+Suggested labels:
+
+- healthy
+- needs_attention
+- at_risk
+- critical
+
+If data for a dimension is unavailable, mark it unknown instead of inventing a negative finding.
+
 ## Priority
 
-### High
+### High / P0
 
 Likely material business impact, tracking concern, or severe performance issue.
 
-### Medium
+### Medium / P1
 
 Meaningful optimization opportunity with reasonable evidence.
 
-### Low
+### Low / P2
 
 Monitoring or incremental improvement.
+
+## Evidence discipline
+
+Separate:
+
+- **Observed** — directly visible or supplied.
+- **Inferred** — reasoned interpretation.
+- **Unknown** — not supported by available data.
+
+Do not infer causality from a single metric.
 
 ## Output
 
@@ -75,7 +94,7 @@ Summarize campaign → ad set → ad relationships and identify concentration or
 
 ### Performance
 
-Show spend, conversions, CPA, ROAS, CTR, CPM and other relevant metrics.
+Show spend, conversions, CPA, ROAS, CTR, CPM and other relevant metrics when available.
 
 ### Creative
 
