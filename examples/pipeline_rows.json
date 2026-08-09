@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ad_001",
+    "name": "UGC Hook A",
+    "spend": 120,
+    "impressions": 18000,
+    "reach": 12000,
+    "clicks": 540,
+    "conversions": 12,
+    "revenue": 720,
+    "hook": "Problem hook",
+    "benefit": "Clear benefit",
+    "proof": "Customer testimonial",
+    "cta": "Shop Now"
+  },
+  {
+    "id": "ad_002",
+    "name": "Product Demo B",
+    "spend": 120,
+    "impressions": 22000,
+    "reach": 14000,
+    "clicks": 396,
+    "conversions": 5,
+    "revenue": 300,
+    "hook": "Demonstration hook",
+    "benefit": "Product benefit",
+    "cta": "Learn More"
+  }
+]
