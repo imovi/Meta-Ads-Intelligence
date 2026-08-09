@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ad_001",
+    "name": "Creative A",
+    "spend": 120,
+    "impressions": 18000,
+    "reach": 12000,
+    "clicks": 360,
+    "conversions": 12,
+    "revenue": 540,
+    "currency": "USD"
+  },
+  {
+    "id": "ad_002",
+    "name": "Creative B",
+    "spend": 80,
+    "impressions": 14000,
+    "reach": 7000,
+    "clicks": 196,
+    "conversions": 4,
+    "revenue": 120,
+    "currency": "USD"
+  }
+]
