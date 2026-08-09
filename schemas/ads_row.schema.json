@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Meta Ads Row",
+  "type": "object",
+  "description": "Normalized row for campaign, ad set, or ad performance analysis. Unknown fields may be added by API adapters.",
+  "properties": {
+    "id": {"type": "string"},
+    "name": {"type": "string"},
+    "date_start": {"type": "string"},
+    "date_stop": {"type": "string"},
+    "spend": {"type": "number", "minimum": 0},
+    "impressions": {"type": "number", "minimum": 0},
+    "reach": {"type": "number", "minimum": 0},
+    "clicks": {"type": "number", "minimum": 0},
+    "conversions": {"type": "number", "minimum": 0},
+    "purchases": {"type": "number", "minimum": 0},
+    "revenue": {"type": "number", "minimum": 0},
+    "purchase_value": {"type": "number", "minimum": 0},
+    "currency": {"type": "string"}
+  },
+  "additionalProperties": true
+}
