@@ -1,158 +1,122 @@
-# Competitor Ad Intelligence
+# Competitor Analysis
 
-Use this reference for competitor research, Meta Ad Library analysis, public Facebook/Instagram ad analysis, and creative-market intelligence.
+Use this reference for Meta Ad Library and other public competitor research.
 
-## Source hierarchy
+## Source boundary
 
-Prefer evidence in this order:
+Use only public/authorized observations or user-provided evidence.
 
-1. Public Meta Ad Library/ad source
-2. Public Facebook/Instagram content
-3. User-provided screenshots, URLs, exports, or captured creatives
-4. Other clearly identified public sources
+Possible inputs:
 
-Always identify the source when practical.
+- Meta Ad Library/public ad information
+- public Facebook/Instagram content when accessible
+- screenshots
+- saved creative files
+- URLs supplied by the user
+- user-provided exports or research datasets
 
-## What can be observed
-
-Depending on the source, analyze:
-
-- advertiser/page identity
-- active ad presence
-- creative format
-- image/video composition
-- primary text
-- headline
-- CTA
-- offer/discount
-- product positioning
-- hook
-- pain point
-- benefits
-- proof/testimonial
-- urgency/scarcity
-- UGC/demo style
-- landing page/message alignment when observable
-- repeated creative angles
-
-## What cannot be assumed
-
-Public competitor ads do not automatically reveal private Ads Manager information.
-
-Never state as fact:
-
-- competitor spend
-- competitor CPA
-- competitor ROAS
-- competitor revenue
-- exact audience targeting
-- exact conversion count
-- internal attribution data
-- private campaign structure
-
-If such a conclusion is useful, label it as an inference and explain the evidence.
+Do not represent private Ads Manager data as public data.
 
 ## Evidence labels
 
-Every important conclusion should fit one of these:
+Every important conclusion should be classified as:
 
-### Observed
+- **Observed** — directly visible in the supplied source.
+- **Inferred** — reasonable interpretation from observed evidence.
+- **Unknown** — not available from the source.
 
-Directly visible in the source.
+## What to capture
 
-Example:
+For each observed ad, capture where available:
 
-> Observed: the advertiser is currently running multiple video ads using a discount-led message.
+- advertiser/brand
+- ad/library identifier
+- source URL
+- active/inactive status when shown
+- first/last seen dates when available
+- format
+- image/video/reel characteristics
+- hook
+- primary text
+- headline
+- CTA
+- offer
+- angle
+- proof/social proof
+- landing page/message alignment when observable
+- notes
 
-### Inferred
+## What not to claim
 
-A reasoned interpretation from observed data.
+Public competitor research generally cannot establish a competitor's private:
 
-Example:
+- spend
+- CPA
+- ROAS
+- revenue
+- conversion volume
+- exact audience targeting
+- bid strategy
+- internal attribution data
 
-> Inferred: the creative appears designed for price-sensitive shoppers because the discount is the dominant message.
+Do not estimate these as facts from ad presence, run time, likes, comments, or creative quality.
 
-### Unknown
+## Creative pattern analysis
 
-Not supported by the available source.
+Group observed ads by:
 
-Example:
+- format
+- hook type
+- problem/pain point
+- benefit
+- offer
+- proof
+- CTA
+- positioning
+- product angle
 
-> Unknown: the ad's actual ROAS and CPA are not publicly available from this source.
-
-## Creative breakdown
-
-For every useful competitor ad, extract:
-
-```text
-Hook
-Problem
-Solution
-Benefit
-Proof
-Offer
-Objection handling
-CTA
-```
-
-For video:
-
-```text
-0–3s hook
-Opening visual
-Text overlay
-Product demonstration
-Pacing
-Voiceover
-Proof
-Offer
-Final CTA
-```
+Then identify recurring patterns and notable differences.
 
 ## Competitor comparison
 
-Use a table when comparing brands:
+Use a table when useful:
 
-| Dimension | Brand A | Brand B | Our opportunity |
-|---|---|---|---|
-| Hook | | | |
-| Offer | | | |
-| Creative format | | | |
-| Proof | | | |
-| CTA | | | |
-| Positioning | | | |
-| Repeated angle | | | |
+| Brand | Observed ads | Formats | Main angles | Offers | Proof | CTA patterns |
+|---|---:|---|---|---|---|---|
 
-The final column should identify differentiation opportunities, not encourage direct copying.
+The count means **observed/captured ads**, not necessarily the competitor's complete ad inventory.
 
-## Creative opportunity mining
+## Market gaps
 
-After reviewing competitors, identify:
+A market gap is a hypothesis, not a proven opportunity.
 
-- overused market angles
-- underused benefits
-- underserved objections
-- weak proof patterns
-- offer gaps
-- creative format gaps
-- positioning gaps
+Good output:
 
-Then propose original angles for the user's brand.
+> Observed: most captured competitors use discount-led messaging.
+>
+> Inference: price may be a common acquisition angle.
+>
+> Test hypothesis: differentiate around proof, convenience, product education, or a non-discount value proposition.
 
-## Historical monitoring
+Do not claim that an unobserved angle is absent from the entire market unless the research scope supports that conclusion.
 
-If snapshots are available over time, compare:
+## Creative scoring
 
-- new ads
-- removed ads
-- new offers
-- changed hooks
-- changed formats
-- repeated creatives
-- changes in messaging
+If scoring is useful, score **observable creative completeness/quality**, not business performance.
 
-A long-running ad is evidence of longevity, not proof of profitability.
+A creative score must never be presented as estimated ROAS, CPA, or profitability.
 
-## Ethical boundary
+## Output format
 
-Competitor research should produce market intelligence and differentiated creative strategy. Do not reproduce another advertiser's copyrighted creative assets, branding, testimonials, or identity as if they were the user's own.
+For a competitor report:
+
+1. Research scope
+2. Sources reviewed
+3. Observed patterns
+4. Competitor-by-competitor breakdown
+5. Creative patterns
+6. Offer/messaging patterns
+7. Market-gap hypotheses
+8. Original creative opportunities
+9. Unknown/private metrics
+10. Recommended tests
