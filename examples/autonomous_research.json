@@ -1,0 +1,11 @@
+{
+  "subject": "Skincare in Malaysia",
+  "competitors": ["Brand A", "Brand B"],
+  "market": "Malaysia",
+  "product": "Skincare",
+  "observations": [
+    {"source":"Meta Ad Library","subject":"Brand A","finding":"UGC video with problem-led hook observed","evidence_type":"observed"},
+    {"source":"public landing page","subject":"Brand A","finding":"Discount offer is prominent above the fold","evidence_type":"observed"},
+    {"source":"research synthesis","subject":"market","finding":"Education angle was not observed in the captured sample","evidence_type":"inferred"}
+  ]
+}
