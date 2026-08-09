@@ -1,8 +1,48 @@
-# Ads Reporting
+# Reporting
 
-Use this reference for daily, weekly, monthly, campaign, account, or competitor reports.
+Use this reference to turn Meta Ads data and the other intelligence modules into concise decision-ready reports.
 
-## Standard report
+## Report types
+
+### Daily
+
+Focus on anomalies and urgent changes:
+
+- spend
+- conversions
+- CPA/ROAS
+- major KPI movement
+- delivery/tracking issues
+- actions requiring attention
+
+### Weekly
+
+Focus on decisions:
+
+1. Executive summary
+2. KPI snapshot
+3. Period-over-period change
+4. Best performers
+5. Weakest performers
+6. Creative findings
+7. Competitor observations
+8. Problems and likely causes
+9. Recommended actions
+10. Next 7-day plan
+
+### Monthly
+
+Focus on trends and strategy:
+
+- month-over-month performance
+- account/campaign contribution
+- creative fatigue
+- audience/placement patterns when available
+- offer/positioning insights
+- budget allocation
+- strategic tests for the next month
+
+## Standard report structure
 
 ```text
 # Meta Ads Report
@@ -12,46 +52,54 @@ Account:
 Objective:
 
 ## Executive Summary
-
 ## KPI Overview
-
 ## Best Performers
-
 ## Weakest Performers
-
 ## Change vs Baseline
-
 ## Diagnosis
-
 ## Recommended Actions
-
 ## Risks / Data Limitations
 ```
 
-## KPI table
+## KPI rules
 
-Use the user's business goal to select primary metrics.
+Prefer aggregate metrics calculated from totals rather than averaging row-level ratios when appropriate.
 
-| Metric | Current | Baseline | Change | Interpretation |
-|---|---:|---:|---:|---|
-| Spend | | | | |
-| Results | | | | |
-| CPA | | | | |
-| Revenue | | | | |
-| ROAS | | | | |
+For example:
 
-Add CTR, CPM, CPC, frequency, reach, conversion rate, or other metrics when relevant.
+- CTR = total clicks / total impressions
+- CPC = total spend / total clicks
+- CPA = total spend / total conversions
+- ROAS = total revenue / total spend
+- CPM = total spend / total impressions × 1,000
 
-## Executive summary rules
+Always state the date range and data scope.
 
-The first section should answer:
+## Comparison
 
-- What happened?
-- Why did it happen?
-- What matters most?
-- What should happen next?
+When a previous period is supplied, show both absolute and percentage change where meaningful.
 
-Do not start with a long metric dump.
+Avoid misleading comparisons when:
+
+- date ranges have different lengths
+- attribution settings changed
+- conversion tracking changed
+- campaigns were launched/paused during only one period
+- spend volume is materially different
+
+## Top performers
+
+A top performer should not be selected from a single metric without considering spend and conversion volume. Flag small-sample winners.
+
+## Client-ready writing
+
+Lead with:
+
+- what happened
+- why it likely happened
+- what should happen next
+
+Avoid dumping every available metric into the executive summary.
 
 ## Recommendations
 
@@ -95,3 +143,15 @@ When historical data exists, show:
 - likely explanation
 
 Call out data-quality issues before drawing strong conclusions.
+
+## Data integrity
+
+Clearly distinguish:
+
+- calculated metrics
+- API-provided metrics
+- user-provided data
+- public competitor observations
+- model inference
+
+Never fabricate missing values.
