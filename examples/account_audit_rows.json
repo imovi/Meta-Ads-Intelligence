@@ -1,0 +1,32 @@
+[
+  {
+    "id": "campaign_healthy",
+    "name": "Prospecting Sales",
+    "spend": 500,
+    "impressions": 90000,
+    "clicks": 1800,
+    "conversions": 35,
+    "cpa": 14.29,
+    "roas": 3.5,
+    "ctr": 2.0,
+    "frequency": 1.9,
+    "hook": "Customer problem hook",
+    "benefit": "Clear product benefit",
+    "proof": "Customer testimonial",
+    "cta": "Shop Now"
+  },
+  {
+    "id": "campaign_critical",
+    "name": "Retargeting",
+    "spend": 250,
+    "impressions": 20000,
+    "clicks": 300,
+    "conversions": 0,
+    "cpa": 0,
+    "roas": 0,
+    "ctr": 1.5,
+    "frequency": 4.1,
+    "hook": "Offer",
+    "cta": "Shop Now"
+  }
+]
