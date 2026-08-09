@@ -1,0 +1,8 @@
+{
+  "current": [
+    {"id":"camp_a","name":"Prospecting","roas":2.4,"cpa":24,"ctr":1.8,"spend":420,"conversions":17,"fatigue_signal":true}
+  ],
+  "previous": [
+    {"id":"camp_a","name":"Prospecting","roas":3.3,"cpa":17,"ctr":2.4,"spend":300,"conversions":25}
+  ]
+}
