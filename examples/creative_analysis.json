@@ -1,0 +1,16 @@
+{
+  "ad_id": "ad_demo_001",
+  "format": "video",
+  "hook": "Still wasting money on products that don't work?",
+  "hook_type": "problem",
+  "problem": "Previous products failed to solve the user's problem",
+  "solution": "Demonstrate the product as the alternative",
+  "benefit": "Clear practical benefit",
+  "proof": "Customer testimonial",
+  "offer": "10% off",
+  "objection": "Concern about effectiveness",
+  "cta": "Shop Now",
+  "primary_text": "A practical product demo with proof and an offer.",
+  "headline": "See how it works",
+  "description": "Limited-time offer"
+}
