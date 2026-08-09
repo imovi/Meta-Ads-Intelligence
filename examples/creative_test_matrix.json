@@ -1,0 +1,15 @@
+{
+  "winner": {
+    "id": "ad_001",
+    "name": "UGC Problem Winner",
+    "hook": "Still struggling with the same problem?",
+    "copy": "Problem → benefit → proof",
+    "offer": "10% off",
+    "cta": "Shop Now",
+    "format": "UGC video"
+  },
+  "fatigue": {
+    "signal": true,
+    "confidence": "high"
+  }
+}
