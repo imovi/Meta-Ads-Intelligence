@@ -1,0 +1,38 @@
+[
+  {
+    "brand": "Competitor A",
+    "ad_id": "public-001",
+    "source_url": "https://www.facebook.com/ads/library/",
+    "status": "active",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-10",
+    "format": "video",
+    "hook": "Still struggling with dry skin?",
+    "primary_text": "A simple daily routine for softer-looking skin.",
+    "headline": "Try the daily routine",
+    "cta": "Shop Now",
+    "offer": "10% off",
+    "angle": "problem-solution",
+    "proof": "customer testimonial",
+    "landing_page_url": null,
+    "evidence": "Observed"
+  },
+  {
+    "brand": "Competitor B",
+    "ad_id": "public-002",
+    "source_url": "https://www.facebook.com/ads/library/",
+    "status": "active",
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-10",
+    "format": "image",
+    "hook": "A simple upgrade for your routine",
+    "primary_text": "Show the product and key benefit immediately.",
+    "headline": "Simple upgrade",
+    "cta": "Learn More",
+    "offer": null,
+    "angle": "benefit",
+    "proof": null,
+    "landing_page_url": null,
+    "evidence": "Observed"
+  }
+]
