@@ -1,0 +1,9 @@
+{
+  "title": "Meta Ads Weekly Performance Report",
+  "period": "2026-08-03 to 2026-08-09",
+  "source": "Ads Manager export",
+  "rows": [
+    {"campaign_name":"Prospecting Winner","spend":500,"impressions":70000,"clicks":2100,"conversions":40,"revenue":2000},
+    {"campaign_name":"Retargeting","spend":250,"impressions":30000,"clicks":1200,"conversions":25,"revenue":1000}
+  ]
+}
