@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-08-08",
+    "spend": 200,
+    "impressions": 40000,
+    "clicks": 1000,
+    "ctr": 2.5,
+    "cpm": 5,
+    "cpa": 10,
+    "roas": 3.8,
+    "frequency": 1.8,
+    "conversions": 20
+  },
+  {
+    "date": "2026-08-09",
+    "spend": 220,
+    "impressions": 39000,
+    "clicks": 700,
+    "ctr": 1.8,
+    "cpm": 5.64,
+    "cpa": 13.5,
+    "roas": 2.7,
+    "frequency": 2.4,
+    "conversions": 16
+  }
+]
