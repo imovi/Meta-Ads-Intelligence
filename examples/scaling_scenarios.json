@@ -1,0 +1,6 @@
+[
+  {"id":"camp_winner","name":"Winner","roas":4.1,"cpa":12,"conversions":42,"roas_trend_pct":14,"ctr_trend_pct":3,"frequency":2.1,"fatigue_signal":false},
+  {"id":"camp_mixed","name":"Mixed","roas":2.6,"cpa":18,"conversions":9,"roas_trend_pct":-4,"ctr_trend_pct":-8,"frequency":2.8,"fatigue_signal":false},
+  {"id":"camp_fatigued","name":"Fatigued","roas":3.0,"cpa":16,"conversions":25,"roas_trend_pct":-22,"ctr_trend_pct":-25,"frequency":4.8,"fatigue_signal":true},
+  {"id":"camp_new","name":"New Test","roas":3.5,"cpa":10,"conversions":2,"frequency":1.4,"fatigue_signal":false}
+]
