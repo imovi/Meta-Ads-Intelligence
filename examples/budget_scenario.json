@@ -1,0 +1,10 @@
+{
+  "total_budget": 1000,
+  "target_roas": 2.5,
+  "campaigns": [
+    {"id":"camp_a","name":"Winner","roas":4.0,"conversions":40,"cpa":10},
+    {"id":"camp_b","name":"Stable","roas":2.7,"conversions":25,"cpa":15},
+    {"id":"camp_c","name":"Weak","roas":1.4,"conversions":30,"cpa":28},
+    {"id":"camp_d","name":"New Test","roas":0,"conversions":2,"cpa":0}
+  ]
+}
