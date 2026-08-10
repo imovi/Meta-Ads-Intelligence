@@ -70,10 +70,12 @@ def assess_scaling(row: dict[str, Any], *, target_cpa: float | None = None, targ
     conversions = _num(row, "conversions") or 0
     if score >= 5 and conversions >= 10:
         recommendation, risk = "scale", "low_to_medium"
+    elif conversions < 5:
+        # Too little volume to trust the score in either direction, however
+        # favourable the efficiency metrics currently look.
+        recommendation, risk = "test", "high"
     elif score >= 2:
         recommendation, risk = "hold", "medium"
-    elif conversions < 5:
-        recommendation, risk = "test", "high"
     else:
         recommendation, risk = "reduce", "medium_to_high"
     return {

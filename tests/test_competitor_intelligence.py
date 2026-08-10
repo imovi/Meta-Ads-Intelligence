@@ -28,4 +28,8 @@ def test_compare_brands():
 
 def test_market_gap_is_hypothesis():
     gaps = market_gaps(load_sample())
-    assert any("hypothesis" in gap.lower() or "test" in gap.lower() for gap in gaps)
+    assert gaps
+    # Gaps are structured records, and every one must stay framed as an
+    # untested hypothesis rather than an established market fact.
+    assert all(gap["type"] == "test_hypothesis" for gap in gaps)
+    assert all(gap["caveat"] for gap in gaps)

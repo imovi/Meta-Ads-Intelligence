@@ -7,8 +7,9 @@ def test_kpi_snapshot_uses_aggregate_totals():
         {"spend": 250, "impressions": 30000, "clicks": 1200, "conversions": 25, "revenue": 1000},
     ]
     kpis = kpi_snapshot(rows)
+    # Aggregate totals: spend 750, conversions 65, revenue 3000.
     assert kpis["roas"] == 4.0
-    assert kpis["cpa"] == 10.0
+    assert round(kpis["cpa"], 2) == 11.54
     assert round(kpis["ctr"], 2) == 3.3
 
 

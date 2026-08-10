@@ -41,13 +41,14 @@ def generate_creative_tests(winner: dict[str, Any], *, fatigue: dict[str, Any] |
     if fatigue and fatigue.get("signal"):
         ideas.append({"name": "Fatigue reset", "change": "angle", "concept": "Create a materially different angle/format while retaining the strongest validated product promise.", "keep": ["product", "core_benefit"]})
 
-    for index, idea in enumerate(ideas[:count], start=1):
+    selected = ideas[:max(0, count)]
+    for index, idea in enumerate(selected, start=1):
         idea["test_id"] = f"T{index:02d}"
         idea["control"] = {"format": format_name, "body": body, "offer": offer, "cta": cta}
         idea["hypothesis"] = "The changed variable may improve the selected success metric while the retained variables reduce confounding."
         idea["success_metric"] = "Choose before launch: CTR, CPA, ROAS, or conversion rate based on the business objective."
         idea["stop_condition"] = "Define a minimum spend/conversion sample and a decision threshold before judging the test."
-    return ideas
+    return selected
 
 
 def build_ab_matrix(winner: dict[str, Any], *, fatigue: dict[str, Any] | None = None, count: int = 5) -> dict[str, Any]:

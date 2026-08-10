@@ -50,7 +50,7 @@ def creative_score(ad: dict[str, Any]) -> dict[str, Any]:
         "brand": row.get("brand"),
         "observable_creative_completeness": round(sum(components.values()) / len(components) * 10, 1),
         "components": components,
-        "warning": "Content-completeness only; not ROAS, CPA, spend, or profitability.",
+        "warning": "Content-completeness only; this is not an estimate of ROAS, CPA, spend, or profitability.",
     }
 
 

@@ -90,7 +90,9 @@ def rank_for_budget_allocation(rows: Iterable[dict[str, Any]], *, min_spend: flo
         item["allocation_score"] = roas if not evidence_weak else roas * 0.5
         item["recommendation"] = "scale_candidate" if not evidence_weak and roas > 1 else "collect_more_data_or_fix"
         result.append(item)
-    return sorted(result, key=lambda x: x["allocation_score"], reverse=True)
+    # On equal scores prefer the better-evidenced candidate, so a small-sample
+    # row cannot outrank a proven one purely through sort stability.
+    return sorted(result, key=lambda x: (x["allocation_score"], not x["evidence_weak"]), reverse=True)
 
 
 def next_7_day_plan(rows: Iterable[dict[str, Any]], *, target_cpa: float | None = None, target_roas: float | None = None) -> list[dict[str, Any]]:

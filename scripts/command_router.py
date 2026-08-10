@@ -25,7 +25,11 @@ MODE_PATTERNS: dict[str, tuple[str, ...]] = {
         r"\b(pause|resume|activate|enable|disable|delete|remove|publish|create|launch|duplicate|increase|decrease|change|update|edit|set)\b",
         r"\b(budget|campaign|ad set|ad|targeting|bid|placement)\b.*\b(to|change|set|pause|resume|delete|create)\b",
     ),
-    "audit": (r"\b(full|complete|account)\b.*\b(audit|checkup|health check)\b", r"\baudit (my )?(meta|facebook|instagram) ads\b"),
+    "audit": (
+        r"\b(full|complete|account)\b.*\b(audit|checkup|health check)\b",
+        r"\b(audit|checkup|health check)\b.*\b(account|campaigns?|ads?|everything)\b",
+        r"\baudit (my )?(meta|facebook|instagram) ads\b",
+    ),
     "competitor": (r"\bcompetitor(s)?\b", r"\bad library\b", r"\bwhat (is|are) .* running\b"),
     "creative": (r"\bcreative(s)?\b", r"\bhook(s)?\b", r"\b(reel|video|image) ad\b", r"\bad copy\b"),
     "report": (r"\b(report|weekly report|monthly report|daily report)\b", r"\bsummar(y|ize)\b.*\bads\b"),
@@ -54,7 +58,9 @@ def route(text: str) -> Route:
             confirmation_required=True,
         )
 
-    priority = ["audit", "competitor", "creative", "report", "monitor", "strategy", "analyze"]
+    # Competitor language is the more specific signal, so it is matched before
+    # the account-scoped audit route ("audit my competitor ads" is research).
+    priority = ["competitor", "audit", "creative", "report", "monitor", "strategy", "analyze"]
     for mode in priority:
         if _matches(normalized, MODE_PATTERNS[mode]):
             return Route(mode, "high", f"Matched {mode} task language.")
